@@ -1,0 +1,93 @@
+﻿@model GestionPrueba.Models.Pedido
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Formulario.css" asp-append-version="true" />
+</head>
+
+
+
+<body>
+    <header>
+
+        <nav>
+            <img class="logoE" src="~/img/Logo_Establecimiento.png" />
+            <ul class="menu-horizontal">
+                <li>
+                    <a asp-action="Index" asp-controller="Pedidos" class="EmMenu">Pedidos</a>
+                </li>
+                <li>
+                    <a asp-action="Index3" class="ProMenu">Productos</a>
+                </li>
+                <li class="IS"><a asp-action="Salir" asp-controller="Home">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="FFondo">
+        <div class="FtituloD">
+            <p class="">Deliminar Usuario</p>
+        </div>
+        <h3 class="pregunta">¿Está seguro de que quiere eliminar el usuario?</h3>
+        <dl class="FFondo2">
+            <dt class="DCantidad Ftxt">
+                @Html.DisplayNameFor(model => model.Cantidad)
+            </dt>
+            <dd class="ICantidad Ftxt">
+                @Html.DisplayFor(model => model.Cantidad)
+            </dd>
+            <dt class="DMesa Ftxt">
+                @Html.DisplayNameFor(model => model.NumeroMesa)
+            </dt>
+            <dd class="IMesa Ftxt">
+                @Html.DisplayFor(model => model.NumeroMesa)
+            </dd>
+            <dt class="DNota Ftxt">
+                @Html.DisplayNameFor(model => model.Nota)
+            </dt>
+            <dd class="INota Ftxt">
+                @Html.DisplayFor(model => model.Nota)
+            </dd>
+            <dt class="DEstatus Ftxt">
+                @Html.DisplayNameFor(model => model.Estatus)
+            </dt>
+            <dd class="IEstatus Ftxt">
+                @Html.DisplayFor(model => model.Estatus)
+            </dd>
+            <dt class="DAditivos Ftxt">
+                @Html.DisplayNameFor(model => model.IdProductoNavigation)
+            </dt>
+            <dd class="IAditivos Ftxt">
+                @Html.DisplayFor(model => model.IdProductoNavigation.Aditivos)
+            </dd>
+            <dt class="DUsuarioPe Ftxt">
+                @Html.DisplayNameFor(model => model.UsuarioNavigation)
+            </dt>
+            <dd class="IUsuarioPe Ftxt">
+                @Html.DisplayFor(model => model.UsuarioNavigation.ApellidoP)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="IdPedido" />
+            <input type="hidden" asp-for="IdProducto" />
+            <input type="hidden" asp-for="Usuario" />
+            <input type="hidden" asp-for="Cantidad" />
+            <input type="hidden" asp-for="NumeroMesa" />
+            <input type="hidden" asp-for="Nota" />
+            <input type="hidden" asp-for="Estatus" value="Cancelado" />
+            <div class="Dbtn">
+                <input type="submit" value="Delete" class="FbtnB Ftxt" /> |
+                <div class="DbtnR Ftxt">
+                    <a asp-action="Index">Regresar</a>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</body>
+

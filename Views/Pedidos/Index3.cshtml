@@ -1,0 +1,81 @@
+﻿@model IEnumerable<GestionPrueba.Models.Producto>
+
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Tablas.css" asp-append-version="true" />
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <img class="logoE" src="~/img/Logo_Establecimiento.png" />
+            <ul class="menu-horizontal">
+                <li>
+                    <a asp-action="Index" asp-controller="Pedidos" class="EmMenu" >Pedidos</a>
+                </li>
+                <li>
+                    <a asp-action="Index3" class="ProMenu">Productos</a>
+                </li>
+                <li class="IS"><a asp-action="Salir" asp-controller="Home">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="tituloT">
+        <p>Productos</p>
+    </div>
+    <!--<img class="tituloT" src="~/img/Productos.png" />-->
+    
+    <table class="Tabla3">
+        <thead>
+            <tr class="Tabla1">
+                <th class="ValorT">
+                    Nombre
+                </th>
+                <th class="ValorT">
+                    Precio
+                </th>
+                <th class="ValorT">
+                    Descripción
+                </th>
+                <th class="ValorT">
+                    Categoria
+                </th>
+                <th class="ValorT">
+                    Aditivos
+                </th>          
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="ValorT2">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Precio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ingredientes)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Categoria)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Aditivos)
+                    </td>                               
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</body>

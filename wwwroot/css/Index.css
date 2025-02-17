@@ -1,0 +1,143 @@
+﻿body{
+    background: url("../img/Fondo2.jpg") no-repeat 0 10%;
+    background-size: cover;
+}
+nav {
+    margin: auto;
+    background: #052F6F;
+    font-size: 20px;
+    margin-top:50px;
+    height:65px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logoE {
+    top: -20px;
+    height: 190px;
+    left: 50px;
+    position: absolute;
+}
+
+.menu-horizontal {  
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+    .menu-horizontal > li > a {
+        display: block;  
+        padding: 15px 20px;
+        color: white;       
+        font-size: 25px;
+        font-family: Calibri;
+    }
+
+    .menu-horizontal > li:hover {
+        background-color: #0A3981;
+    }
+
+.menu-vertical {
+    position: absolute;
+    display: none;
+    list-style: none;
+    width: 200px;
+    background-color: rgba(0,0,0,.5);
+}
+
+.menu-horizontal li:hover .menu-vertical {
+    display: block;
+}
+
+.menu-vertical li:hover {
+    background-color: black;
+}
+
+.menu-vertical > li > a {
+    display: block;
+    color: white;
+    padding: 15px 15px 15px 20px;
+    font-size: 24px;
+    font-family: Calibri;
+}
+.ConMenu {
+    left: 500px;
+    position: absolute;
+}
+.ConM {
+    left: 500px;
+    top: 112px;
+    position: absolute;
+}
+
+.EmMenu {
+    left: 300px;
+    position: absolute;
+}
+
+.ProMenu {
+    left: 500px;
+    position: absolute;
+}
+.PedMenu {
+    left: 700px;
+    position: absolute;
+}
+
+.IS > a {
+    right: 150px;
+    position: absolute;
+}
+
+.Principal {
+    height: 900px;
+    left: 5px;
+    right: 5px;
+    top: 0px;
+    position: absolute;
+}
+
+.PFoto1 {
+    top: 370px;
+    left: 200px;
+    position: absolute;
+    height: 280px;
+}
+
+.PFoto2 {
+    top: 300px;
+    left: 850px;
+    height:600px;
+    position: absolute;
+}
+
+.PFoto3 {
+    top: 310px;
+    left: 1380px;
+    position: absolute;
+}
+
+login {
+    position: center;
+    left: 500px;
+    right: 500px;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+}
+.fin {
+    left: 0px;
+    height: 50px;
+    width: 100%;
+    bottom: 0px;
+    background: #D9D9D9;
+    background: rgba(255, 255, 255, 0.5);
+    position: absolute;
+}
+.fin2 {
+    left:60px;
+    top: 15px;
+    font-size: 20px;
+    position: absolute;
+}

@@ -1,0 +1,151 @@
+﻿@model IEnumerable<GestionPrueba.Models.Usuario>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Tablas.css" asp-append-version="true" />
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <img class="logoE" src="~/img/Logo_Establecimiento.png" />
+            <ul class="menu-horizontal">
+                <li>
+                    <a asp-action="Index" asp-controller="Usuarios" class="EmMenu">Empleados</a>
+                </li>
+                <li>
+                    <a asp-action="Index" asp-controller="Productos" class="ProMenu">Productos</a>
+                </li>         
+                <li class="IS"><a asp-action="Salir" asp-controller="Home">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="tituloT">
+        <p>Empleados</p>
+    </div>
+    <!--<img class="tituloT" src="~/img/Empleados.png" />-->
+    
+    
+    <div class="TodosU">
+        <a asp-action="Index2"><img src="~/img/Iconos/ActualizarPe.png" />Todos Los Usuarios</a>
+    </div>
+    <div class="BtnAgragar">
+        <a asp-action="Create"><img src="~/img/Iconos/MasAgregar.png" />Agregar Usuario</a>
+    </div>
+    <table class="Tabla">
+        <thead>
+            <tr >
+                <th class="ValorT">
+                    Usuario
+                </th>
+                <th class="ValorT">
+                    Nombre
+                </th>
+                <th class="ValorT">
+                    Apellido Paterno
+                </th>
+                <th class="ValorT">
+                    Apellido Materno
+                </th>
+                <th class="ValorT">
+                    Cargo
+                </th>
+                <th class="ValorT">
+                    Sexo
+                </th>
+                <th class="ValorT">
+                    Edad
+                </th>
+                <th class="ValorT">
+                    Correo
+                </th>             
+                <th class="ValorT">
+                    Estatus
+                </th>
+                <th class="ValorT">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="ValorT2">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usuario1)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ApellidoP)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ApellidoM)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cargo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Sexo)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Edad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Correo)
+                    </td>  
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Estatus)
+                    </td>
+                    <td>
+                        <div class="btns">
+                            <div class="btnEditar">
+                                <a asp-action="Edit" class="btn btn-warning" asp-route-id="@item.Usuario1"><img src="~/img/Iconos/ActualizarU.png" /></a>
+                            </div>
+                            <div class="btnEliminar">
+
+
+
+                                <form id="eliminarform" asp-action="Delete" asp-route-id="@item.Usuario1" onsubmit="enviar(event)">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <input type="hidden" name="Usuario1" id="Usuario1" asp-for="@item.Usuario1" />
+                                    <input type="hidden" name="Nombre" id="Nombre" asp-for="@item.Nombre" />
+                                    <input type="hidden" name="ApellidoP" id="ApellidoP" asp-for="@item.ApellidoP" />
+                                    <input type="hidden" name="ApellidoM" id="ApellidoM" asp-for="@item.ApellidoM" />
+                                    <input type="hidden" name="Cargo" id="Cargo" asp-for="@item.Cargo" />
+                                    <input type="hidden" name="Sexo" id="Sexo" asp-for="@item.Sexo" />
+                                    <input type="hidden" name="Edad" id="Edad" asp-for="@item.Edad" />
+                                    <input type="hidden" name="Correo" id="Correo" asp-for="@item.Correo" />
+                                    <input type="hidden" name="Contraseña" id="Contraseña" asp-for="@item.Contraseña" />
+                                    <input type="hidden" name="Estatus" id="Estatus" asp-for="@item.Estatus" value="False" />
+                                    <button type="submit" style="cursor: pointer" class="btn btn-danger"><img src="~/img/Iconos/EliminarU.png" onclick="confirmar()"/></button>
+                                </form>
+
+
+                            </div>
+                        </div>
+                       
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+
+@section Scripts{
+    <script src="~/js/usuario.js"></script>
+    <script>
+        
+
+         function confirmar(){
+             Swal.fire('Excelente', "Producto eliminado correctamente", 'success', 15000);
+        }
+           
+        
+    
+    </script>
+            }

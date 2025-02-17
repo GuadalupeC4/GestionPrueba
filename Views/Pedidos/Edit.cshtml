@@ -1,0 +1,132 @@
+﻿@model GestionPrueba.Models.Pedido
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Formulario.css" asp-append-version="true" />
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <img class="logoE" src="~/img/Logo_Establecimiento.png" />
+            <ul class="menu-horizontal">
+                <li>
+                    <a asp-action="Index" asp-controller="Pedidos" class="EmMenu">Pedidos</a>
+                </li>
+                <li>
+                    <a asp-action="Index3" class="ProMenu">Productos</a>
+                </li>
+                <li class="IS"><a asp-action="Salir" asp-controller="Home">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="FFondo">
+        <div class="Ftitulo">
+            <p class="">Modificar Pedido</p>
+        </div>
+        <div class="FFondo2">
+            <form asp-action="Edit" id="formulario" onsubmit="enviar(event)">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                <div class="FIdPedido">
+                    <label asp-for="IdPedido" class="Ftxt"></label><br />
+                    <input asp-for="IdPedido" class="FInfo Ftxt" readonly="readonly" />
+                </div>
+                <div class="FIdProducto">
+                    <label asp-for="IdProducto" class="Ftxt"></label><br />
+                    <select asp-for="IdProducto" class="FInfo Ftxt" asp-items="ViewBag.IdProducto"></select>
+                    <span asp-validation-for="IdProducto" class="text-danger"></span>
+                </div>
+                <div class="FUsuarioPe">
+                    <label asp-for="Usuario" class="Ftxt"></label><br />
+                    <select asp-for="Usuario" class="FInfo Ftxt" asp-items="ViewBag.Usuario"></select>
+                    <span asp-validation-for="Usuario" class="text-danger"></span>
+                </div>
+                <div class="FCantidad">
+                    <label asp-for="Cantidad" class="Ftxt"></label><br />
+                    <select asp-for="Cantidad" class="FInfo Ftxt">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                    </select>
+                    <span asp-validation-for="Cantidad" class="FtxtE"></span>
+                </div>
+                <div class="FMesa">
+                    <label asp-for="NumeroMesa" class="Ftxt"></label><br />
+                    <input asp-for="NumeroMesa" class="FInfo Ftxt" />
+                    <span asp-validation-for="NumeroMesa" class="FtxtE2"></span>
+                </div>
+                <div class="FNota">
+                    <label asp-for="Nota" class="Ftxt"></label><br />
+                    <input asp-for="Nota" class="FInfo Ftxt" />
+                    <span asp-validation-for="Nota" class="FtxtE3"></span>
+                </div>
+                <div class="FEstatusPe">
+                    <label asp-for="Estatus" class="Ftxt"></label><br />
+                    <!--</a><input asp-for="Estatus" class="FInfo Ftxt" />-->
+                    <select asp-for="Estatus" class="FInfo Ftxt">
+                        <option value="Cancelado">Cancelado</option>
+                        <option value="En espera">En espera</option>
+                        <option value="Realizado">Realizado</option>
+                        </select>
+                    <span asp-validation-for="Estatus" class="FtxtE3"></span>
+                </div>
+                <div class="Fbtn">
+                    <input type="submit" value="Guardar" class="FbtnG FBtxt" />
+                    <div class="FbtnR ">
+                        <a asp-action="Index">Regresar</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+    <script>
+        function enviar(e) {
+            e.preventDefault();
+
+            Swal.fire({
+              title: 'Modificación exitosa',
+              icon: 'success',
+              //showCancelButton:true;
+              confirmButtonText:'Ok',
+              timer: 3000
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    
+                    const formulario = document.getElementById('formulario');
+                    formulario.submit();
+                }
+            });
+        }
+
+        
+    
+
+    </script>
+}

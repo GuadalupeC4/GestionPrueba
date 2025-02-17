@@ -1,0 +1,67 @@
+﻿@model Usuario
+@{
+    ViewData["Title"] = "Recuperar Contraseña";
+}
+<head>
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/menu.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/logincss.css" asp-append-version="true" />
+
+</head>
+<body class="fondoLogin">
+    <div class="btnRegreso">
+        <a asp-action="Login" asp-controller="Cuenta"><img class="FRegresar" src="~/img/Login/FlechaRegreso.png" /></a>
+
+    </div>
+    <div class="btnInicio">
+        <a asp-action="Index" asp-controller="Inicio"><img class="FRegresar" src="~/img/Login/inicio.png" /></a>
+
+    </div>
+    <div class="RFondo">
+        <img class="logoU" src="~/img/Logo_Establecimiento.png" />
+        <form method="post" asp-action="StartRecovery" asp-controller="Access">
+            <div class="RFondo2">  
+                <div class="titulo2">
+                    <p>Recuperar contraseña</p>
+                </div>
+                <!--<img class="titulo2" src="~/img/TituloRecuperarC.png" /> -->
+                
+              
+                <div class="RUsuario2">
+                    <img class="imglogin" src="~/img/Login/Usuario.png" />
+                    <input class="txt_info" type="text" placeholder="Usuario" required asp-for="Usuario1">
+                </div>
+
+                <div class="RCorreo">
+                    <img class="imglogin" src="~/img/Login/Correo.png" />
+                    <input class="txt_info" type="text" placeholder="Correo" required asp-for="Correo">
+                </div>
+
+                <button class="BIngresa txt_login2" type="submit">Recuperar</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+@section Scripts {
+
+    <script>
+        @if (TempData.ContainsKey("sms"))
+    {
+        <text>
+            Swal.fire({
+                icon: 'success',
+                title: 'Exito',
+                text: 'Se mando con exito la información a su correo'
+            });
+        </text>
+    }
+            
+
+
+            
+    </script>
+}
+
+

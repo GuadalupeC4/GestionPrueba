@@ -1,0 +1,153 @@
+﻿@model GestionPrueba.Models.Usuario
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Formulario.css" asp-append-version="true" />
+</head>
+<body class="FondoC">
+    <header>
+
+        <nav>
+            <img class="logoE" src="~/img/Logo_Establecimiento.png" />
+            <ul class="menu-horizontal">
+                <li>
+                    <a asp-action="Index" asp-controller="Usuarios" class="EmMenu">Empleados</a>
+                </li>
+                <li>
+                    <a asp-action="Index" asp-controller="Productos" class="ProMenu">Productos</a>
+                </li>
+                <li class="IS"><a asp-action="Salir" asp-controller="Home">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="FFondo">
+        <div class="Ftitulo">
+           
+            <p class="">Agregar Usuario</p>
+        </div>
+        <div class="FFondo2">
+            <form asp-action="Create" id="formulario" onsubmit="enviar(event)">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="FNombre">
+                    <label asp-for="Nombre" class="Ftxt"></label><br />
+                    <input asp-for="Nombre" class="FInfo Ftxt" />
+                    <span asp-validation-for="Nombre" class="FtxtE"></span>
+                </div>
+                <div class="FApeP">
+                    <label asp-for="ApellidoP" class="Ftxt"></label><br />
+                    <input asp-for="ApellidoP" class="FInfo Ftxt" />
+                    <span asp-validation-for="ApellidoP" class="FtxtE2"></span>
+                </div>
+                <div class="FApeM">
+                    <label asp-for="ApellidoM" class="Ftxt"></label><br />
+                    <input asp-for="ApellidoM" class="FInfo Ftxt" value="ﾠ" />
+                    
+                </div>
+                <div class="FCargo">
+                    <label asp-for="Cargo" class="Ftxt"></label><br />
+                    <select asp-for="Cargo" class="FInfo Ftxt">
+                        <option value="Gerente">Gerente</option>
+                        <option value="Mesero">Mesero</option>
+                        <option value="Cocinero">Cocinero</option>
+                    </select>
+                    <span asp-validation-for="Cargo" class="FtxtE3"></span>
+                </div>
+                <div class="FSexo">
+                    <label asp-for="Sexo" class="Ftxt"></label><br />
+                    <select asp-for="Sexo" class="FInfo Ftxt">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                    </select>
+                    <span asp-validation-for="Sexo" class="FtxtE"></span>
+                </div>
+                <div class="FEdad">
+                    <label asp-for="Edad" class="Ftxt"></label><br />
+                    <!--<input asp-for="Edad" class="FInfo Ftxt" />-->
+                    <select asp-for="Edad" class="FInfo Ftxt">
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+
+                    </select>
+                    <span asp-validation-for="Edad" class="FtxtE"></span>
+                </div>
+                <div class="FCorreo">
+                    <label asp-for="Correo" class="Ftxt"></label><br />
+                    <input asp-for="Correo" class="FInfo Ftxt" />
+                    <span asp-validation-for="Correo" class="FtxtE3"></span>
+                </div>
+                <div class="FContraseña">
+                    <label asp-for="Contraseña" class="Ftxt"></label><br />
+                    <input asp-for="Contraseña" class="FInfo Ftxt"/>
+                    <span asp-validation-for="Contraseña" class="FtxtE"></span>
+                </div>
+                <div class="FEstatus form-check">
+                    <label class="form-check-label Ftxt">
+                        <input class=" form-check-input" asp-for="Estatus" /> @Html.DisplayNameFor(model => model.Estatus)
+                    </label>
+                    
+                </div>
+                <div class="Fbtn">
+                    <input type="submit" value="Guardar" class="FbtnG FBtxt" />
+
+                    <div class="FbtnR ">
+                        <a asp-action="Index">Regresar</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+@section Scripts {
+
+    <script>
+        function enviar(e) {
+            e.preventDefault();
+
+            Swal.fire({
+              title: 'Usuario registrado exitosamente',
+              icon: 'success',
+              //showCancelButton:true;
+              confirmButtonText:'Ok',
+              timer: 3000
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    
+                    const formulario = document.getElementById('formulario');
+                    formulario.submit();
+                }
+            });
+        }
+
+        @if (TempData.ContainsKey("Error"))
+    {
+        <text>
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: '@TempData["Error"]'
+            });
+        </text>
+    }
+            
+    </script>
+}

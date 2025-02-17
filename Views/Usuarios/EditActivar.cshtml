@@ -1,0 +1,140 @@
+﻿@model GestionPrueba.Models.Usuario
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<head>
+    <meta http-equiv=”Content-Type” content=”text/html; charset=ISO-8859-1″ />
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Formulario.css" asp-append-version="true" />
+</head>
+<body>
+    <header>
+
+        <nav>
+            <img class="logoE" src="~/img/Logo_Establecimiento.png" />
+            <ul class="menu-horizontal">
+                <li>
+                    <a asp-action="Index" asp-controller="Usuarios" class="EmMenu">Empleados</a>
+                </li>
+                <li>
+                    <a asp-action="Index" asp-controller="Productos" class="ProMenu">Productos</a>
+                </li>            
+                <li class="IS"><a asp-action="Salir" asp-controller="Home">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+ 
+    <div class="FFondo">
+        <div class="Ftitulo">
+            <p class="">Modificar Usuario</p>
+        </div>
+        <div class="FFondo2">
+            <form asp-action="EditActivar" id="formulario" onsubmit="enviar(event)">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="FUsuario">
+                    <label asp-for="Usuario1" class="Ftxt"></label><br />
+                    <input asp-for="Usuario1" class="FInfo Ftxt" readonly="readonly" />
+                </div>               
+                <div class="FNombre">
+                    <label asp-for="Nombre" class="Ftxt"></label><br />
+                    <input asp-for="Nombre" class="FInfo Ftxt" />
+                    <span asp-validation-for="Nombre" class="FtxtE"></span>
+                </div>
+                <div class="FApeP">
+                    <label asp-for="ApellidoP" class="Ftxt"></label><br />
+                    <input asp-for="ApellidoP" class="FInfo Ftxt" />
+                    <span asp-validation-for="ApellidoP" class="FtxtE2"></span>
+                </div>
+                <div class="FApeM">
+                    <label asp-for="ApellidoM" class="Ftxt"></label><br />
+                    <input asp-for="ApellidoM" class="FInfo Ftxt" />
+                    <span asp-validation-for="ApellidoM" class="FtxtE2"></span>
+                </div>
+                <div class="FCargo">
+                    <label asp-for="Cargo" class="Ftxt"></label><br />
+                    <select asp-for="Cargo" class="FInfo Ftxt">
+                        <option value="Gerente">Gerente</option>
+                        <option value="Mesero">Mesero</option>
+                        <option value="Cocinero">Cocinero</option>
+                    </select>
+                    <span asp-validation-for="Cargo" class="FtxtE3"></span>
+                </div>
+                <div class="FSexo">
+                    <label asp-for="Sexo" class="Ftxt"></label><br />
+                    <select asp-for="Sexo" class="FInfo Ftxt">
+                        <option value="Masculino">Masculino</option>
+                        <option value="Femenino">Femenino</option>
+                    </select>
+                    <span asp-validation-for="Sexo" class="FtxtE"></span>
+                </div>
+                <div class="FEdad">
+                    <label asp-for="Edad" class="Ftxt"></label><br />
+                    <input asp-for="Edad" class="FInfo Ftxt" />
+                    <span asp-validation-for="Edad" class="text-danger"></span>
+                </div>
+                <div class="FCorreo">
+                    <label asp-for="Correo" class="Ftxt"></label><br />
+                    <input asp-for="Correo" class="FInfo Ftxt" />
+                    <span asp-validation-for="Correo" class="FtxtE3"></span>
+                </div>
+
+                <input asp-for="Contraseña" type="hidden" />
+
+                <div class="FEstatus form-check">
+                    <label class="form-check-label Ftxt">
+                        <input class="form-check-input" asp-for="Estatus" /> @Html.DisplayNameFor(model => model.Estatus)
+                    </label>
+                </div>>
+                  
+                <div class="Fbtn">
+                    <input type="submit" value="Guardar" class="FbtnG Ftxt" />
+                    <div class="FbtnR Ftxt">
+                        <a asp-action="Index">Regresar</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        function enviar(e) {
+            e.preventDefault();
+
+            Swal.fire({
+              title: 'Modificación realizada',
+              icon: 'success',
+              //showCancelButton:true;
+              confirmButtonText:'Ok',
+              timer: 3000
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    
+                    const formulario = document.getElementById('formulario');
+                    formulario.submit();
+                }
+            });
+        }
+
+          @if (TempData.ContainsKey("Error"))
+    {
+        <text>
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Modificación no realizada'
+            });
+        </text>
+    }
+    </script>
+}

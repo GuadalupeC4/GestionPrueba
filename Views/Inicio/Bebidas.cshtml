@@ -1,0 +1,230 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<head>
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/menu.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Bebidas.css" asp-append-version="true" />
+</head>
+
+<body class="PagBebidas">
+    <header>
+
+        <nav class="">
+            <a asp-action="Index" asp-controller="Home"><img class="logoE" src="~/img/Logo_Establecimiento.png" /></a>
+            <ul class="menu-horizontal">
+                <li>
+                    <a>Productos</a>
+                    <ul class="menu-vertical">
+                        <li><a asp-action="Bebidas" asp-controller="Inicio">Bebidas</a></li>
+                        <li><a asp-action="Snack" asp-controller="Inicio">Snack's</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="ConMenu">Contáctanos</a>
+                    <ul class="menu-vertical ConM">
+                        <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    </ul>
+                </li>
+
+                <li class="IS"><a asp-action="Login" asp-controller="Cuenta">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        
+        <div class="titulo">
+            <hr class="linea1" />
+            <p>Bebidas</p>
+            <hr class="linea2" />
+        </div>
+        
+       
+        
+        <div class="Contenido2">
+            <div class="Contenido3">
+                <div class="titulo1">
+                    <p>Mojitos</p>
+                    <hr />
+                </div>
+                <div class="Descripcion">
+                    <p>
+                        <img class="PFoto1" src="~/img/Bebidas/Bebida1.png" />
+                        <h2>Mojito azul(Pitufo)</h2>
+                        Escarchado con pulpa de tamarindo color<br />
+                        azul y miguelito sabor mora azul, <br />
+                        vodka nacional, kosako, agua mineral,<br />
+                        lima, y limón azul.
+                    </p>
+                </div>
+                <div class="Descripcion2">
+                    <p>
+                        <img class="PFoto1" src="~/img/Bebidas/Bebida2.png" />
+                        <h2>Mojito ultra violeta</h2>
+                        vodka nacional, lima, kosako azul<br />
+                        jugó de arandano o uva.
+                    </p>
+                </div>
+                <div class="Descripcion3">
+                    <p>
+                        <img class="PFoto1" src="~/img/Bebidas/Bebida3.png" />
+                        <h2>Mojito  clásico o tradicional</h2>
+                        con limón, hierbabuena y menta<br />
+                        Ron nacional, jarabe, agua mineral  y lima
+                    </p>
+                </div>
+
+            </div>
+            <div class="Contenido4">
+                <div class="Descripcion">
+                    <p>
+                        <img class="PFoto1" src="~/img/Bebidas/Bebida4.png" />
+                        <h2>Mojito de frutos rojos</h2>
+                        Mora, zarzamora, fresa y jugo de arándano<br />
+                        Ron nacional,jarabe, agua mineral y lima.
+                    </p>
+                </div>
+
+            </div>
+          
+            <div class="titulo2">
+                <p>Cerveza</p>
+                <hr />
+            </div>
+
+            <div class="Contenido5">
+                <div class="Descripcion">
+                    <p>
+                        <img class="PFoto2" src="~/img/Bebidas/Cerveza.png" />
+                        <h2>CERVEZA 355ml</h2>
+                        Cerveza corona o victoria $30.00<br />
+
+                    </p>
+                </div>
+                <div class="Descripcion2">
+                    <p>
+                        <img class="PFoto2" src="~/img/Bebidas/MicheladaT1.png" />
+                        <h2>MICHELADA<br />TRADICIONAL 500ml</h2>
+                        Escarchada con sal y limon $35.00<br />
+                        Con camarones $55.00
+                    </p>
+                </div>
+                <div class="Descripcion3">
+                    <p>
+                        <img class="PFoto2" src="~/img/Bebidas/MicheladaT2.png" />
+                        <h2>MICHELADA<br />TRADICIONAL 1 LITRO</h2>
+                        Escarchado con sal y limon $70.00<br />
+                        Con camarones $85.00
+                    </p>
+                </div>
+            </div>
+            <div class="Contenido6">
+                <div class="Descripcion">
+                    <p>
+                        <img class="PFoto2" src="~/img/Bebidas/Clamato1.png" />
+                        <h2>CLAMA PEPE 500ml</h2><br />
+                        Escarchado con chamoy, clamato y limon $50.00<br />
+                        Con camarones $70.00
+                    </p>
+                </div>
+                <div class="Descripcion2">
+                    <p>
+                        <img class="PFoto2" src="~/img/Bebidas/Clamato2.png" />
+                        <h2>CLAMA PEPE 1 LITRO</h2>
+                        Escarchado con chamoy, clamato y limon $90.00<br />
+                        Con camarones $100.00
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="Contenido7">
+                <div class="Descripcion">
+                    <p>
+                        <img class="PFoto2" src="~/img/Bebidas/MCubana1.png" />
+                        <h2>CUBANA 500ml</h2>
+                        Escarchado con chamoy, clamato, 0<br />
+                        limon y salsas $50.00<br />
+                        Con camarones $70.00
+                    </p>
+                </div>
+                <div class="Descripcion2">
+                    <p>
+                        <img class="PFoto2" src="~/img/Bebidas/MCubana2.png" />
+                        <h2>CUBANA 1 LITRO</h2>
+                        Escarchado con chamoy, clamato, 0<br />
+                        limon y salsas $90.00<br />
+                        Con camarones $100.00
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="titulo3">
+                <p>Bebidas sin alcohol</p>
+                <hr />
+            </div>
+
+            <div class="Contenido8">
+                <div class="Descripcion">
+                    <p>
+                        <img class="PFoto1" src="~/img/Bebidas/Refrescos.png" />
+                        <h2>REFRESCOS</h2>
+                        Coca-cola, Manzanita, $25.00<br />
+
+                    </p>
+                </div>
+                <div class="Descripcion2">
+                    <p>
+                        <img class="PFoto3" src="~/img/Bebidas/Limonada.png" />
+                        <h2>LIMONADA</h2>
+                        Natural o mineral $45.00<br />
+                    </p>
+                </div>
+                <div class="Descripcion3">
+                    <p>
+                        <img class="PFoto3" src="~/img/Bebidas/Naranjada.png" />
+                        <h2>NARANJADA</h2>
+                        Natural o mineral $45.00<br />
+                    </p>
+                </div>
+            </div>
+
+            <div class="Contenido9">
+                <div class="Descripcion">
+                    <p>
+                        <img class="PFoto1" src="~/img/Bebidas/ClamatoP.png" />
+                        <h2>CLAMATO PREPARADO</h2>
+                        Clamato preparado $45.00<br />
+
+                    </p>
+                </div>
+                <div class="Descripcion2">
+                    <p>
+                        <img class="PFoto3" src="~/img/Bebidas/Piñada.png" />
+                        <h2>PIÑADA</h2>
+                        Piñada $55.00<br />
+                    </p>
+                </div>
+                <div class="Descripcion3">
+                    <p>
+                        <img class="PFoto1" src="~/img/Bebidas/Agua1.png" />
+                        <h2>AGUA NATURAL</h2>
+                        Agua natural 1 litro $10.00<br />
+                        Agua natural 1/2 litro $20.00
+
+                    </p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+</body>

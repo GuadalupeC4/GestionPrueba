@@ -1,0 +1,121 @@
+﻿@model GestionPrueba.Models.Producto
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Formulario.css" asp-append-version="true" />
+</head>
+
+<body class="FondoC">
+    <header>
+
+        <nav>
+            <img class="logoE" src="~/img/Logo_Establecimiento.png" />
+            <ul class="menu-horizontal">
+                <li>
+                    <a asp-action="Index" asp-controller="Usuarios" class="EmMenu">Empleados</a>
+                </li>
+                <li>
+                    <a asp-action="Index" asp-controller="Productos" class="ProMenu">Productos</a>
+                </li>            
+                <li class="IS"><a asp-action="Salir" asp-controller="Home">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="FFondo">
+        <div class="Ftitulo">
+            <p class="">Agregar Producto</p>
+        </div>
+        <div class="FFondo2">
+            <form asp-action="Create" id="formulario" onsubmit="enviar(event)">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="FNombreP">
+                    <label asp-for="Nombre" class="Ftxt"></label><br />
+                    <input asp-for="Nombre" class="FInfo Ftxt" />
+                    <span asp-validation-for="Nombre" class="FtxtE3"></span>
+                </div>
+                <div class="FPrecioP">
+                    <label asp-for="Precio" class="Ftxt"></label><br />
+                    <input asp-for="Precio" class="FInfo Ftxt" />
+                    <span asp-validation-for="Precio" class="FtxtE3"></span>
+                </div>
+                <div class="FIngredientesP">
+                    <label asp-for="Ingredientes" class="Ftxt"></label><br />
+                    <textarea asp-for="Ingredientes" class="FtxtI Ftxt"  value=""></textarea>
+                    <!--<input asp-for="Ingredientes" class="FInfo Ftxt" />-->                   
+                    <span asp-validation-for="Ingredientes" class="FtxtE2"></span>
+                </div>
+                <div class="FCategoriaP">
+                    <label asp-for="Categoria" class="Ftxt"></label><br />
+                    <!--<input asp-for="Categoria" class="FInfo Ftxt" />-->
+                     <select asp-for="Categoria" class="FInfo Ftxt">
+                        <option value="Bebidas">Bebidas</option>
+                        <option value="Snacks">Snacks</option>
+                    </select>
+                    <span asp-validation-for="Categoria" class="FtxtE"></span>
+                </div>
+                <div class="FAditivosP">
+                    <label asp-for="Aditivos" class="Ftxt"></label><br />
+                    <input asp-for="Aditivos" class="FInfo Ftxt" value="ﾠ" />
+                </div>
+                <div class="FEstatusP form-check">
+                    <label class="Ftxt">
+                        <input class="form-check-input" asp-for="Estatus" /> @Html.DisplayNameFor(model => model.Estatus)
+                    </label>
+                </div>
+                <div class="Fbtn">
+                    <input type="submit" value="Guardar"class="FbtnG FBtxt" />
+                    <div class="FbtnR">
+                        <a asp-action="Index">Regresar</a>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</body>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        function enviar(e) {
+            e.preventDefault();
+
+            Swal.fire({
+              title: 'Producto registrado exitosamente',
+              icon: 'success',
+              //showCancelButton:true;
+              confirmButtonText:'Ok',
+              timer: 3000
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+                if (result.isConfirmed) {
+                    
+                    const formulario = document.getElementById('formulario');
+                    formulario.submit();
+                }
+            });
+        }
+
+        @if (TempData.ContainsKey("Error"))
+    {
+        <text>
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: '@TempData["Error"]'
+            });
+        </text>
+    }
+
+    </script>
+}

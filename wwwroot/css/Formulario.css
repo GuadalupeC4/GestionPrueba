@@ -1,0 +1,638 @@
+﻿.FondoC {
+    background: url("../img/Fondo2.jpg") no-repeat 0 10%;
+    background-size: cover;
+}
+.FFondo {
+    width: 1200px;
+    height: 600px;
+    left: 310px;
+    top: 160px;
+    background: #D9D9D9;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    position: absolute;
+}
+
+.Ftitulo {
+    left: 380px;
+    top: 0px;
+    font-size:50px;
+    position: absolute;
+}
+
+    .Ftitulo p {
+        text-align: center;
+        font-family: Courier New;
+    }
+
+.FtituloD {
+    left: 340px;
+    top: 0px;
+    font-size: 50px;
+    position: absolute;
+}
+.FtituloD p {
+    text-align: center;
+    font-family: Courier New;
+}
+
+.pregunta {
+    top:100px;
+    left:400px;
+    position: absolute;
+}
+
+.FFondo2 {
+    width: 1100px;
+    height: 430px;
+    left: 50px;
+    top: 130px;
+    position: absolute;
+}
+
+.FInfo {
+    width: 350px;
+    top: 35px;
+    background-color: #D9D9D9;
+    border: none;
+    position: absolute;
+    border-radius: 3px;
+}
+.Ftxt {
+    font-size: 23px;
+    color: black;
+    font-family: Calibri;
+}
+
+.FtxtE {
+    font-size: 16px;
+    color: red;
+    font-family: Calibri;
+    left: 120px;
+    top: 4px;
+    position: absolute;
+}
+
+.FtxtE2 {
+    font-size: 16px;
+    color: red;
+    font-family: Calibri;
+    left: 170px;
+    top: 4px;
+    position: absolute;
+}
+
+.FtxtE3 {
+    font-size: 16px;
+    color: red;
+    font-family: Calibri;
+    left: 90px;
+    top: 4px;
+    position: absolute;
+}
+
+/*Usuario*/
+
+.FUsuario {
+    width: 400px;
+    left: 50px;
+    position: absolute;
+}
+.FNombre {
+    width: 400px;
+    left: 500px;
+    top: 0px;
+    position: absolute;
+}
+.FApeP {
+    width: 400px;
+    left: 50px;
+    top: 80px;
+    position: absolute;
+}
+.FApeM {
+    width: 400px;
+    left: 500px;
+    top: 80px;
+    position: absolute;
+}
+.FCargo {
+    width: 400px;
+    left: 50px;
+    top: 160px;
+    position: absolute;
+}
+.FSexo {
+    width: 400px;
+    left: 50px;
+    top: 240px;
+    position: absolute;
+}
+.FEdad {
+    width: 400px;
+    left: 500px;
+    top: 240px;
+    position: absolute;
+}
+.FCorreo {
+    width: 400px;
+    left: 50px;
+    top: 320px;
+    position: absolute;
+}
+.FContraseña {
+    width: 400px;
+    left: 500px;
+    top: 320px;
+    position: absolute;
+}
+.FEstatus {
+    width: 400px;
+    left: 50px;
+    top: 400px;
+    position: absolute;
+}
+
+
+
+/*UsuarioEliminar*/
+
+
+.DUsuario {
+    width: 400px;
+    left: 50px;
+    position: absolute;
+}
+.IUsuario {
+    width: 400px;
+    left: 50px;
+    position: absolute;
+}
+.DNombre {
+    width: 400px;
+    left: 30px;
+    position: absolute;
+}
+.INombre {
+    width: 400px;
+    left: 150px;
+    position: absolute;
+}
+.DApeP {
+    width: 400px;
+    left: 30px;
+    top: 80px;
+    position: absolute;
+}
+.IApeP {
+    width: 400px;
+    left: 150px;
+    top: 80px;
+    position: absolute;
+}
+.DApeM {
+    width: 400px;
+    left: 550px;
+    top: 80px;
+    position: absolute;
+}
+.IApeM {
+    width: 400px;
+    left: 680px;
+    top: 80px;
+    position: absolute;
+}
+.DCargo {
+    width: 400px;
+    left: 30px;
+    top: 160px;
+    position: absolute;
+}
+.ICargo {
+    width: 400px;
+    left: 150px;
+    top: 160px;
+    position: absolute;
+}
+.DSexo {
+    width: 400px;
+    left: 30px;
+    top: 240px;
+    position: absolute;
+}
+.ISexo {
+    width: 400px;
+    left: 150px;
+    top: 240px;
+    position: absolute;
+}
+.DEdad {
+    width: 400px;
+    left: 550px;
+    top: 240px;
+    position: absolute;
+}
+.IEdad {
+    width: 400px;
+    left: 680px;
+    top: 240px;
+    position: absolute;
+}
+.DCorreo {
+    width: 400px;
+    left: 30px;
+    top: 320px;
+    position: absolute;
+}
+.ICorreo {
+    width: 400px;
+    left: 150px;
+    top: 320px;
+    position: absolute;
+}
+.DContraseña {
+    width: 400px;
+    left: 550px;
+    top: 320px;
+    position: absolute;
+}
+.IContraseña {
+    width: 400px;
+    left: 680px;
+    top: 320px;
+    position: absolute;
+}
+.DEstatus {
+    width: 400px;
+    left: 30px;
+    top: 400px;
+    position: absolute;
+}
+.IEstatus {
+    width: 400px;
+    left: 150px;
+    top: 400px;
+    position: absolute;
+}
+
+/*Productos*/
+
+.FUsuarioP {
+    width: 400px;
+    left: 50px;
+    position: absolute;
+}
+.FNombreP {
+    width: 400px;
+    left: 500px;
+    top: 0px;
+    position: absolute;
+}
+.FPrecioP {
+    width: 400px;
+    left: 500px;
+    top: 80px;
+    position: absolute;
+}
+
+
+.FCategoriaP {
+    width: 400px;
+    left: 50px;
+    top: 80px;
+    position: absolute;
+ 
+}
+.FAditivosP {
+    width: 400px;
+    left: 50px;
+    top: 160px;
+    position: absolute;
+}
+.FEstatusP {
+    width: 400px;
+    left: 500px;
+    top: 190px;
+    position: absolute;
+}
+.FIngredientesP {
+    width: 800px;
+    left: 50px;
+    top: 280px;
+    position: absolute;
+}
+
+.FtxtI {
+    height: 120px;
+    background-color: #D9D9D9;
+    font-family: Calibri;
+    position: absolute;
+}
+
+/*ProductosElimanar*/
+
+.DNombreP {
+    width: 400px;
+    left: 30px;
+    top: 20px;
+    position: absolute;
+}
+.INombreP {
+    width: 400px;
+    left: 150px;
+    top: 20px;
+    position: absolute;
+}
+.DPrecio {
+    width: 400px;
+    left: 30px;
+    top: 90px;
+    position: absolute;
+}
+.IPrecio {
+    width: 400px;
+    left: 150px;
+    top: 90px;
+    position: absolute;
+}
+.DIngredientes {
+    width: 400px;
+    left: 470px;
+    top: 20px;
+    position: absolute;
+}
+.IIngredientes {
+    width: 400px;
+    left: 500px;
+    top:50px;
+    position: absolute;
+}
+.DCategoria {
+    width: 400px;
+    left: 30px;
+    top: 160px;
+    position: absolute;
+}
+.ICategoria {
+    width: 400px;
+    left: 150px;
+    top: 160px;
+    position: absolute;
+}
+.DAditivos {
+    width: 400px;
+    left: 470px;
+    top: 240px;
+    position: absolute;
+}
+.IAditivos {
+    width: 400px;
+    left: 550px;
+    top: 240px;
+    position: absolute;
+}
+.DEstatusP {
+    width: 400px;
+    left: 30px;
+    top: 250px;
+    position: absolute;
+}
+.IEstatusP {
+    width: 400px;
+    left: 150px;
+    top: 250px;
+    position: absolute;
+}
+
+
+/*Pedidos*/
+
+.FIdPedido {
+    width: 400px;
+    left: 50px;
+    position: absolute;
+}
+.FUsuarioPe {
+    width: 400px;
+    left: 500px;
+    position: absolute;
+}
+.FIdProducto {
+    width: 400px;
+    left: 50px;
+    top: 80px;
+    position: absolute;
+}
+.FCantidad {
+    width: 400px;
+    left: 50px;
+    top: 160px;
+    position: absolute;
+}
+.FMesa {
+    width: 400px;
+    left: 500px;
+    top: 160px;
+    position: absolute;
+}
+.FNota {
+    width: 800px;
+    left: 50px;
+    top: 240px;
+    position: absolute;
+}
+.FEstatusPe {
+    width: 400px;
+    left: 50px;
+    top: 320px;
+    position: absolute;
+}
+
+/*PedidosEliminar*/
+
+
+.DUsuarioPe {
+}
+
+.IUsuarioPe {
+}
+.DCantidad{
+
+}
+.ICantidad{
+
+}
+.DMesa {
+    width: 400px;
+    left: 50px;
+    position: absolute;
+}
+.IMesa {
+    width: 400px;
+    left: 50px;
+    position: absolute;
+}
+.DAditivos {
+    width: 400px;
+    left: 470px;
+    top: 240px;
+    position: absolute;
+}
+.IAditivos {
+    width: 400px;
+    left: 550px;
+    top: 240px;
+    position: absolute;
+}
+
+.DNota {
+}
+
+.INota {
+}
+
+.DEstatus {
+    width: 400px;
+    left: 30px;
+    top: 250px;
+    position: absolute;
+}
+
+.IEstatus {
+    width: 400px;
+    left: 150px;
+    top: 250px;
+    position: absolute;
+}
+
+
+
+
+.FtxtI {
+    display: block;
+    width: 100%;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+.FBtxt {
+    font-size: 20px;
+    color: white;
+}
+
+.Fbtn {
+    background: #D9D9D9;
+    width: 110px;
+    left: 950px;
+    top: 30px;
+    position: absolute;
+}
+.FbtnG {
+    background-color: #0d6dfd;
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+    top: 0px;
+    position: absolute;
+    text-align: center;
+    border: none;
+    color: white;
+}
+
+    .FbtnG > a {
+        top: 4px;
+        left: 33px;
+        font-family: Calibri;
+        color: white;
+        position: absolute;
+    }
+
+.FbtnB {
+    background-color: #dd1e1f;
+    border-radius: 5px;
+    width: 110px;
+    height: 30px;
+    top: 0px;
+    position: absolute;
+    text-align: center;
+    border: none;
+    color: white;
+}
+
+    .FbtnB > a {
+        top: 4px;
+        left: 33px;
+        position: absolute;
+        font-family: Calibri;
+    }
+
+.FbtnR {
+    background-color: #de3447;
+    border-radius: 5px;
+    width: 120px;
+    height: 30px;
+    top: 45px;
+    position: absolute;
+    text-align: center;
+}
+    .FbtnR > a {
+        top: 2px;
+        left: 18px;
+        font-size: 23px;
+        color: white;
+        font-family: Calibri;
+        position: absolute;
+    }
+
+
+.Dbtn {
+    width: 110px;
+    height: 50px;
+    left: 950px;
+    top: 150px;
+    position: absolute;
+}
+
+.DbtnE {
+    background-color: #129afe;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    top: 0px;
+    position: absolute;
+    text-align: center;
+}
+    .DbtnE > a {
+        top: 4px;
+        left:33px;
+        position: absolute;
+    }
+.DbtnR {
+    background-color: #0d6dfd;
+    border-radius: 5px;
+    width: 110px;
+    height: 30px;
+    top: 45px;
+    position: absolute;
+    text-align: center;
+}
+
+    .DbtnR > a {
+        top: 2px;
+        left: 17px;
+        position: absolute;
+        color: white;
+    }
+

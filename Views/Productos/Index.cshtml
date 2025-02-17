@@ -1,0 +1,136 @@
+﻿@model IEnumerable<GestionPrueba.Models.Producto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Tablas.css" asp-append-version="true" />
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <img class="logoE" src="~/img/Logo_Establecimiento.png" />
+            <ul class="menu-horizontal">
+                <li>
+                    <a asp-action="Index" asp-controller="Usuarios" class="EmMenu">Empleados</a>
+                </li>
+                <li>
+                    <a asp-action="Index" asp-controller="Productos" class="ProMenu">Productos</a>
+                </li>            
+                <li class="IS"><a asp-action="Salir" asp-controller="Home">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="tituloT">
+        <p>Productos</p>
+    </div>
+    <!--<img class="tituloT" src="~/img/Productos.png" />-->
+    
+    <div class="TodosU">
+        <a asp-action="IndexTodos"><img src="~/img/Iconos/ActualizarPe.png" />Todos los productos</a>
+    </div>
+    <div class="BtnAgragar">
+        
+        <a asp-action="Create"><img src="~/img//Iconos/MasAgregar.png" /> Agregar Producto</a>
+    </div>
+    <table class="Tabla2">
+        <thead>
+            <tr class="Tabla1">
+                <th class="ValorT">
+                    Código
+                </th>
+                <th class="ValorT">
+                    Nombre
+                </th>
+                <th class="ValorT">
+                    Precio
+                </th>
+                <th class="ValorT">
+                    Descripción
+                </th>
+                <th class="ValorT">
+                    Categoria
+                </th>
+                <th class="ValorT">
+                    Aditivos
+                </th>
+                <th class="ValorT">
+                    Estatus
+                </th>
+                <th class="ValorT">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr class="ValorT2">
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdProducto)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nombre)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Precio)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Ingredientes)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Categoria)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Aditivos)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Estatus)
+                    </td>
+                    <td>
+                        <div class="btns2">
+                            <div class="btnEditar2">
+                                <a asp-action="Edit" asp-route-id="@item.IdProducto"><img src="~/img/Iconos/Modificar.png" /></a>
+                            </div>
+                            <div class="btnEliminar2">
+                               <form id="formulario" asp-action="Delete" asp-route-id="@item.IdProducto" >
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <input type="hidden" name="IdProducto" id="IdProducto" asp-for="@item.IdProducto" />
+                                    <input type="hidden" name="Nombre" id="Nombre" asp-for="@item.Nombre" />
+                                    <input type="hidden" name="Precio" id="Precio" asp-for="@item.Precio" />
+                                    <input type="hidden" name="Ingredientes" id="Ingredientes" asp-for="@item.Ingredientes" />
+                                    <input type="hidden" name="Categoria" id="Categoria" asp-for="@item.Categoria" />
+                                    <input type="hidden" name="Aditivos" id="Aditivos" asp-for="@item.Aditivos" />
+                                    <input type="hidden" name="Estatus" id="Estatus" asp-for="@item.Estatus" value="False" />
+                                    <button type="submit" style="cursor: pointer" class="btn btn-danger"><img src="~/img/Iconos/Eliminar.png" onclick="confirmar()"/></button>
+                                </form>
+                            </div>
+                        </div>
+                  
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+</body>
+
+
+@section Scripts{
+<script>
+        
+
+    function confirmar(){
+             Swal.fire('Excelente', "Usuario eliminado correctamente", 'success', 15000);
+        }
+
+</script>
+
+}
+
+

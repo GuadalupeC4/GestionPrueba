@@ -1,0 +1,87 @@
+﻿@model GestionPrueba.Models.Producto
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Formulario.css" asp-append-version="true" />
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <img class="logoE" src="~/img/Logo_Establecimiento.png" />
+            <ul class="menu-horizontal">
+                <li>
+                    <a asp-action="Index" asp-controller="Usuarios" class="EmMenu">Empleados</a>
+                </li>
+                <li>
+                    <a asp-action="Index" asp-controller="Productos" class="ProMenu">Productos</a>
+                </li>           
+                <li class="IS"><a asp-action="Salir" asp-controller="Home">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="FFondo">
+        <div class="FtituloD">
+            <p class="">Deliminar Usuario</p>
+        </div>
+        <h3 class="pregunta">¿Está seguro de que quiere eliminar el usuario?</h3>
+        <dl class="FFondo2">
+            <dt class="DNombreP Ftxt">
+                @Html.DisplayNameFor(model => model.Nombre)
+            </dt>
+            <dd class="INombreP Ftxt">
+                @Html.DisplayFor(model => model.Nombre)
+            </dd>
+            <dt class="DPrecio Ftxt">
+                @Html.DisplayNameFor(model => model.Precio)
+            </dt>
+            <dd class="IPrecio Ftxt">
+                @Html.DisplayFor(model => model.Precio)
+            </dd>
+            <dt class="DIngredientes Ftxt">
+                @Html.DisplayNameFor(model => model.Ingredientes)
+            </dt>
+            <dd class="IIngredientes Ftxt">
+                @Html.DisplayFor(model => model.Ingredientes)
+            </dd>
+            <dt class="DCategoria Ftxt">
+                @Html.DisplayNameFor(model => model.Categoria)
+            </dt>
+            <dd class="ICategoria Ftxt">
+                @Html.DisplayFor(model => model.Categoria)
+            </dd>
+            <dt class="DAditivos Ftxt">
+                @Html.DisplayNameFor(model => model.Aditivos)
+            </dt>
+            <dd class="IAditivos Ftxt">
+                @Html.DisplayFor(model => model.Aditivos)
+            </dd>
+            <dt class="DEstatusP Ftxt">
+                @Html.DisplayNameFor(model => model.Estatus)
+            </dt>
+            <dd class="IEstatusP Ftxt">
+                @Html.DisplayFor(model => model.Estatus)
+            </dd>
+        </dl>
+
+        <form asp-action="Delete">
+            <input type="hidden" asp-for="IdProducto" />
+            <div class="Dbtn">
+                <input type="submit" value="Delete" class="FbtnB Ftxt" />
+                <div class="DbtnR Ftxt">
+                    <a asp-action="Index">Regresar</a>
+                </div>
+                
+            </div>
+           
+        </form>
+    </div>
+</body>
+

@@ -1,0 +1,130 @@
+﻿@model IEnumerable<GestionPrueba.Models.Pedido>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Tablas.css" asp-append-version="true" />
+</head>
+
+<body>
+    <header>
+
+        <nav>
+            <img class="logoE" src="~/img/Logo_Establecimiento.png" />
+            <ul class="menu-horizontal">
+                <li>
+                    <a asp-action="Index2" asp-controller="Pedidos" class="EmMenu">Pedidos</a>
+                </li>
+                <li>
+                    <a asp-action="IndexCocinero" class="ProMenu">Productos</a>
+                </li>
+                <li class="IS"><a asp-action="Salir" asp-controller="Home">Salir</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="tituloT">
+        <p>Pedidos</p>
+    </div>
+    <!-- <img class="tituloT" src="~/img/Pedidos.png" />-->
+
+    <table class="Tabla2">
+        <thead>
+            <tr class="Tabla1 ">
+                <th class="ValorT">
+                    IdPedido
+                </th>
+                <th class="ValorT">
+                    Cantidad
+                </th>
+                <th class="ValorT">
+                    NumeroMesa
+                </th>
+                <th class="ValorT">
+                    Nota
+                </th>
+                <th class="ValorT">
+                    Estatus
+                </th>
+                <th class="ValorT">
+                    Código
+                </th>
+                <th class="ValorT">
+                    Usuario
+                </th>
+                <th class="ValorT">Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            @{
+                int n = 0;
+            }
+
+                @foreach (var item in Model)
+            {
+                
+                n++;
+                if (n < 5)
+                {
+                    <tr class="ValorT2">
+                        <td>
+                            @Html.DisplayFor(modelItem => item.IdPedido)
+                        </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Cantidad)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.NumeroMesa)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nota)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Estatus)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.IdProducto)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Usuario)
+                    </td>
+                    <td>
+                        <div class="btns">
+                            
+                            <div class="btnFinalizar">
+
+                                <form asp-action="Delete1" asp-route-id="@item.IdPedido">
+                                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                    <input type="hidden" name="IdPedido" id="IdPedido" asp-for="@item.IdPedido" />
+                                    <input type="hidden" name="IdProducto" id="IdProducto" asp-for="@item.IdProducto" />
+                                    <input type="hidden" name="Usuario" id="Usuario" asp-for="@item.Usuario" />
+                                    <input type="hidden" name="Cantidad" id="Cantidad" asp-for="@item.Cantidad" />
+                                    <input type="hidden" name="NumeroMesa" id="NumeroMesa" asp-for="@item.NumeroMesa" />
+                                    <input type="hidden" name="Nota" id="Nota" asp-for="@item.Nota" />
+                                    <input type="hidden" name="Estatus" id="Estatus" asp-for="@item.Estatus" value="Realizado" />
+                                    <button type="submit" style="cursor: pointer" class=""><img src="~/img/Iconos/Finalizar.png" onclick="confirmar()"/></button>
+                                </form>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            }                }
+                
+            
+            
+        </tbody>
+    </table>
+
+</body>
+<script>
+        
+
+        function confirmar(){
+             Swal.fire('Excelente', "Pedido realizado correctamente", 'success', 15000);
+        }
+    
+
+    </script>

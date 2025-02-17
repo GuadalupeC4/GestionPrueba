@@ -1,0 +1,205 @@
+﻿body {
+}
+body {
+    background: url("../img/Fondo13.jpg");
+    background-size: auto;
+    height: 2700px;
+}
+.linea1 {
+    width: 300px;
+    border: none;
+    border-top: 3px solid black;
+    margin-top: 50px;
+}
+
+.linea2 {
+    width: 300px;
+    border: none;
+    border-top: 3px solid black;
+    margin-top: 70px;
+}
+
+.titulo > p {
+    left: 800px;
+    font-size: 70px;
+    font-family: Roboto;
+    top: 150px;
+    color: black;
+    position: absolute;
+}
+
+.titulo1 > p {
+    left: 800px;
+    font-size: 50px;
+    top: -90px;
+    color: black;
+    position: absolute;
+}
+
+.titulo1 > hr {
+    width: 300px;
+    border: none;
+    border-top: 3px solid black;
+    margin-top: -15px;
+}
+.Contenido2 {
+    height: 600px;
+    left: 20px;
+    right: 20px;
+    top: 350px;
+    position: absolute;
+    background-color:;
+}
+.Descripcion {
+    background: #D9D9D9;
+    height: 210px;
+    width: 470px;
+    border-radius: 5px;
+    top: 100px;
+    left: 100px;
+    position: absolute;
+    text-align: center;
+}
+
+    .Descripcion > p > img {
+        vertical-align: baseline;
+        top: -100px;
+        left: -60px;
+    }
+
+    .Descripcion > p > h2 {
+        text-align: center;
+        color: black;
+    }
+
+    .Descripcion > p {
+        text-align: center;
+        color: black;
+    }
+
+
+
+.Descripcion2 {
+    background: #D9D9D9;
+    height: 210px;
+    width: 450px;
+    border-radius: 5px;
+    top: 100px;
+    left: 640px;
+    position: absolute;
+    text-align: center;
+}
+
+    .Descripcion2 > p > img {
+        vertical-align: baseline;
+        top: -100px;
+        left: -50px;
+    }
+
+    .Descripcion2 > p > h2 {
+        text-align: center;
+        color: black;
+    }
+
+    .Descripcion2 > p {
+        text-align: center;
+    }
+
+.Descripcion3 {
+    background: #D9D9D9;
+    height: 210px;
+    width: 450px;
+    border-radius: 5px;
+    top: 100px;
+    left: 1200px;
+    position: absolute;
+    text-align: center;
+}
+
+    .Descripcion3 > p > img {
+        vertical-align: baseline;
+        top: -100px;
+        left: -70px;
+    }
+
+    .Descripcion3 > p {
+        text-align: center;
+    }
+
+.Contenido4 {
+    height: 250px;
+    left: 5px;
+    right: 5px;
+    top: 300px;
+    position: absolute;
+}
+
+.Contenido5 {
+    height: 250px;
+    left: 5px;
+    right: 5px;
+    top: 600px;
+    position: absolute;
+}
+
+.Contenido6 {
+    height: 250px;
+    left: 5px;
+    right: 5px;
+    top: 920px;
+    position: absolute;
+}
+
+
+.titulo1 > p {
+    left: 800px;
+    font-size: 50px;
+    top: -100px;
+    color: black;
+    position: absolute;
+}
+
+.titulo1 > hr {
+    width: 300px;
+    border: none;
+    border-top: 3px solid black;
+    margin-top: -30px;
+}
+
+.Contenido7 {
+    height: 250px;
+    left: 5px;
+    right: 5px;
+    top: 1400px;
+    position: absolute;
+}
+
+.titulo2 > p {
+    left: 810px;
+    font-size: 50px;
+    top: -50px;
+    color: black;
+    position: absolute;
+}
+
+.titulo2 > hr {
+    width: 300px;
+    border: none;
+    border-top: 3px solid black;
+    margin-top: 20px;
+}
+
+.Contenido8 {
+    height: 250px;
+    left: 5px;
+    right: 5px;
+    top: 1900px;
+    position: absolute;
+}
+.PFoto1 {
+    width: 150px;
+    height: 200px;
+    top: -60px;
+    left: -500px;
+    position: absolute;
+}

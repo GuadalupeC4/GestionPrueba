@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+<head>
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />  
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body>
+
+    <header>
+
+        <nav class="">
+            <img class="logoE" src="~/img/Logo_Establecimiento.png" />
+            <ul class="menu-horizontal">
+                <li>
+                    <a>Productos</a>
+                    <ul class="menu-vertical">
+                        <li><a asp-action="Bebidas" asp-controller="Inicio">Bebidas</a></li>
+                        <li><a asp-action="Snack" asp-controller="Inicio">Snack's</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a class="ConMenu">Contáctanos</a>
+                    <ul class="menu-vertical ConM">
+                        <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    </ul>
+                    
+                </li>
+
+                <li class="IS"><a asp-action="Login" asp-controller="Cuenta">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+  
+
+    <div class="">
+        <img class="PFoto1" src="~/img/Principal/Ben&wingo1.png" />
+        <img class="PFoto2" src="~/img/Principal/Principal_hamburgusa.png" />
+        <img class="PFoto3" src="~/img/Principal/Principal_frase.png" />
+    </div>
+</body>
+<footer class="fin">
+    <div class="fin2">
+        ©Ben&Wingo Company
+        ben&wingo.com- <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    </div>
+</footer>

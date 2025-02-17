@@ -1,0 +1,213 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<head>
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/menu.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Snack.css" asp-append-version="true" />
+</head>
+
+<body>
+    <header>
+
+        <nav class="">
+           <a asp-action="Index" asp-controller="Home"><img class="logoE" src="~/img/Logo_Establecimiento.png" /></a>
+            <ul class="menu-horizontal">
+                <li>
+                    <a>Productos</a>
+                    <ul class="menu-vertical">
+                        <li><a asp-action="Bebidas" asp-controller="Inicio">Bebidas</a></li>
+                        <li><a asp-action="Snack" asp-controller="Inicio">Snack's</a></li>
+                    </ul>
+                </li>
+                <li>
+                   <a class="ConMenu">Contáctanos</a>
+                    <ul class="menu-vertical ConM">
+                        <li><a href="https://www.facebook.com/">Facebook</a></li>
+                    </ul>
+                </li>
+
+                <li class="IS"><a asp-action="Login" asp-controller="Cuenta">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+
+        <div class="titulo">
+            <hr class="linea1" />
+            <p>Snack's</p>
+            <hr class="linea2" />
+        </div>
+
+
+
+        <div class="Contenido2">
+            <div class="Contenido3">
+               
+                <div class="Descripcion">
+                    <p>
+                        <img class="PFoto1" src="~/img/Snack/Hamburguesa.png" />
+                        <h2>HAMBURGUESAS</h2>
+                        Sencilla....$60<br />
+                        Sencilla con papas....$75 <br />
+                        Hawaiana....$75<br />
+                        Hawaiana con papas....$85<br />
+                        Con tocino....$80<br />
+                        Tocino con papas....$90
+                    </p>
+                </div>
+                <div class="Descripcion2">
+                    <p>
+                        <img class="PFoto1" src="~/img/Snack/HotDog.png" />
+                        <h2>HOG DOG</h2>
+                        Sencillo....$25<br />
+                        Sencilla con papas....$40 <br />
+                        Con tocino....$35<br />
+                        Tocino con papas....$50
+                    </p>
+                </div>
+                <div class="Descripcion3">
+                    <p>
+                        <img class="PFoto1" src="~/img/Snack/Alitas.png" />
+                        <h2>ALITAS</h2>
+                        6 piezas....$85 <br />
+                        A la BBQ<br />
+                        Picositas<br />
+                        Parmesano<br />
+                        Mango habanero<br />
+                        Tamarindo chipotle
+                    </p>
+                </div>
+            </div>
+            <div class="Contenido4">             
+                <div class="Descripcion">
+                    <p>
+                        <img class="PFoto1" src="~/img/Snack/Costillas.png" />
+                        <h2>COSTILLAS</h2>
+                        4 piezas....$100<br />
+                        A las BBQ <br />
+                        Adobadas<br />
+                        Acompañadas con papas a la francesa
+                    </p>
+                </div>
+                <div class="Descripcion2">
+                    <p>
+                        <img class="PFoto1" src="~/img/Snack/Nachos2.jpeg" />
+                        <h2>NACHOS</h2>
+                        Tradicionales....$45<br />
+                        Con carne, receta especial....$80 <br />
+                        Con arrachera y guacamole....$120<br />
+                    </p>
+                </div>
+                <div class="Descripcion3">
+                    <p>
+                        <img class="PFoto1" src="~/img/Snack/Nugget.jpeg" />
+                        <h2>NUGGET´S DE POLLO</h2>
+                        6 piezas....$35<br />
+                        8 piezas....$65<br />
+                        Incluye papas <br />
+                        o<br />
+                        cruditos
+                    </p>
+                </div>
+            </div>
+
+            <div class="Contenido5">
+                <div class="Descripcion">
+                    <p>
+                        <img class="PFoto1" src="~/img/Snack/Aros.png" />
+                        <h2>AROS DE CEBOLLA<br />CON PAPAS</h2>
+                        6 piezas....$80<br />                        
+                    </p>
+                </div>
+                <div class="Descripcion2">
+                    <p>
+                        <img class="PFoto1" src="~/img/Snack/Dedos.png" />
+                        <h2>DEDOS DE QUESO <br /> CON PAPAS</h2>
+                        6 piezas....$80<br />
+                    </p>
+                </div>
+                <div class="Descripcion3">
+                    <p>
+                        <img class="PFoto1" src="~/img/Snack/Guacamole.jpeg" />
+                        <h2>GUACAMOLE CON <br /> CHICHARRÓN</h2>
+                        Jitomate, cebolla, pepino<br />
+                        salsa magui y limon....$100<br />
+                    </p>
+                </div>
+            </div>
+
+            <div class="Contenido6">
+                <div class="Descripcion">
+                    <p>
+                        <img class="PFoto1" src="~/img/Snack/Papas.png" />
+                        <h2>PAPAS FRITAS</h2>
+                        A la francesa....$55<br />
+                        Papas gajo....$55<br />
+                        Salchi papas....$70<br />
+                    </p>
+                </div>                
+            </div>
+
+            <div class="Contenido7">
+                <div class="titulo1">
+                    <p>Botanas</p>
+                    <hr />
+                </div>
+                <div class="Descripcion">                  
+                    <p>
+                        <img class="PFoto1" src="~/img/Snack/Palomitas.png" />
+                        <br /><br />
+                        <h2>PALOMITAS</h2>
+                        Natural / Mantequilla....$25<br />
+                    </p>
+                </div>
+                <div class="Descripcion2">
+                    <p>
+                        <img class="PFoto1" src="~/img/Snack/Chicharrones.png" />
+                        <br /><br />
+                        <h2>CHICHARRONES</h2>
+                        Chicarrones....$25<br />
+                    </p>
+                </div>
+                <div class="Descripcion3">
+                    <p>
+                        <img class="PFoto1" src="~/img/Snack/Cacahuates.png" />
+                        <br /><br />
+                        <h2>CACAHUATES MIXTOS</h2>
+                        Cacahuates mixtos....$25<br />
+                    </p>
+                </div>
+            </div>
+
+            <div class="Contenido8">
+                <div class="titulo2">
+                    <p>Postres</p>
+                    <hr />
+                </div>
+                <div class="Descripcion">
+                    <p>
+                        <img class="PFoto1" src="~/img/Snack/Duraznos.png" />
+                        <br /><br />
+                        <h2>DURAZNOS CON CREMA</h2>
+                        Duraznos con crema....$30<br />
+                    </p>
+                </div>            
+            </div>
+           
+           
+
+            
+
+
+
+
+        </div>
+    </div>
+
+
+
+</body>

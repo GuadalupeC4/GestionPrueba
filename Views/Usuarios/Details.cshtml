@@ -1,0 +1,130 @@
+﻿@model GestionPrueba.Models.Usuario
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<head>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/Formulario.css" asp-append-version="true" />
+</head>
+
+<body>
+    <br />
+    <header>
+
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
+            <img class="logoE" src="~/img/Logo_Establecimiento.png" />
+            <div class="container">
+                <ul class="menu-horizontal">
+                    <li>
+                        <a href="">Inicio</a>
+                        <ul class="menu-vertical">
+                            <li><a>Tabla Empleados</a></li>
+                            <li><a>Agregar Empleado</a></li>
+                            <li><a>Tabla Productos</a></li>
+                            <li><a>Agregar Producto</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="Opciones" href="">Productos</a>
+                        <ul class="menu-vertical" style="left:400px;
+                        position: absolute; top:104px;">
+                            <li><a>Principal</a></li>
+                            <li><a href="">Css</a></li>
+                            <li><a href="">Javascript</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a style="left:550px;
+                        position: absolute;" href="">Contactanos</a>
+                        <ul class="menu-vertical" style="left:550px;
+                        position: absolute; top:104px;">
+                            <li><a href="">Mensual</a></li>
+                            <li><a href="">Anual</a></li>
+                        </ul>
+                    </li>
+                    <li class="IS"><a asp-action="Salir" asp-controller="Home">Cerrar sesión</a></li>
+                </ul>
+            </div>
+
+        </nav>
+    </header>
+
+    
+
+    <div class="FFondo">
+        <div class="Ftitulo">
+            <h1 class="">Detalles Usuario</h1>
+        </div>
+        <dl class="FFondo2">
+            <dt class="DNombre Ftxt">
+                @Html.DisplayNameFor(model => model.Nombre)
+            </dt>
+            <dd class="INombre Ftxt">
+                @Html.DisplayFor(model => model.Nombre)
+            </dd>
+            <dt class="DApeP Ftxt">
+                @Html.DisplayNameFor(model => model.ApellidoP)
+            </dt>
+            <dd class="IApeP Ftxt">
+                @Html.DisplayFor(model => model.ApellidoP)
+            </dd>
+            <dt class="DApeM Ftxt">
+                @Html.DisplayNameFor(model => model.ApellidoM)
+            </dt>
+            <dd class="IApeM Ftxt">
+                @Html.DisplayFor(model => model.ApellidoM)
+            </dd>
+            <dt class="DCargo Ftxt">
+                @Html.DisplayNameFor(model => model.Cargo)
+            </dt>
+            <dd class="ICargo Ftxt">
+                @Html.DisplayFor(model => model.Cargo)
+            </dd>
+            <dt class="DSexo Ftxt">
+                @Html.DisplayNameFor(model => model.Sexo)
+            </dt>
+            <dd class="ISexo Ftxt">
+                @Html.DisplayFor(model => model.Sexo)
+            </dd>
+            <dt class="DEdad Ftxt">
+                @Html.DisplayNameFor(model => model.Edad)
+            </dt>
+            <dd class="IEdad Ftxt">
+                @Html.DisplayFor(model => model.Edad)
+            </dd>
+            <dt class="DCorreo Ftxt">
+                @Html.DisplayNameFor(model => model.Correo)
+            </dt>
+            <dd class="ICorreo Ftxt">
+                @Html.DisplayFor(model => model.Correo)
+            </dd>
+            <dt class="DContraseña Ftxt">
+                @Html.DisplayNameFor(model => model.Contraseña)
+            </dt>
+            <dd class="IContraseña Ftxt">
+                @Html.DisplayFor(model => model.Contraseña)
+            </dd>
+            <dt class="DEstatus Ftxt">
+                @Html.DisplayNameFor(model => model.Estatus)
+            </dt>
+            <dd class="IEstatus Ftxt">
+                @Html.DisplayFor(model => model.Estatus)
+            </dd>
+        </dl>
+        
+        <div class="Dbtn">
+            <div class="DbtnE Ftxt">
+                <a asp-action="Edit" asp-route-id="@Model?.Usuario1">Edit</a>
+            </div>
+            <div class="DbtnR Ftxt">
+                <a asp-action="Index">Regresar</a>
+            </div>
+        </div>
+    </div>
+    
+
+</body>
+

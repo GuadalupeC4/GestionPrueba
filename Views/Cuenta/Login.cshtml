@@ -1,0 +1,73 @@
+﻿@model Usuario
+
+<head>
+    <link rel="stylesheet" href="~/css/index.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/menu.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/logincss.css" asp-append-version="true" />
+
+</head>
+
+<body class="fondoLogin">
+  
+    <div class="btnRegreso">
+        <a asp-action="Index" asp-controller="Inicio"><img class="FRegresar" src="~/img/Login/FlechaRegreso.png" /></a>
+        
+    </div>
+    <div class="RFondo">
+        <img class="logoU" src="~/img/Logo_Establecimiento.png" />
+        <form method="post" asp-action="Login" asp-controller="Cuenta">
+            <div class="RFondo2">
+                <div class ="titulo">
+                    <p>Login</p>
+                </div>
+                <!--<img class="titulo" src="~/img/Login/TituloLogin.png" /> -->
+                <div class="RUsuario">
+                    <img class="imglogin" src="~/img/Login/Usuario.png" />
+                    <input class="txt_info" type="text" placeholder="Usuario" required asp-for="Usuario1">
+
+                </div>
+
+                <div class="RContraseña">
+                    <img class="imglogin" src="~/img/Login/Contraseña.png" />
+                    <input class="txt_info" type="password" placeholder="Contraseña" required asp-for="Contraseña">
+
+                </div>
+
+                <div class="Rsesion">
+                    <label class="txt_login">
+                        <input class="txt_login" type="checkbox" asp-for="MantenerActivo">Recordar sesión
+                    </label>
+                </div>
+                <div class="ROlvidar">
+                    <label class="txt_login">
+                        ¿Olvidaste tu contraseña? Haz clic en
+                        <a class="txt_login" asp-area="" asp-controller="Access" asp-action="StartRecovery">recuperar</a>
+                    </label>
+                </div>
+                <button class="BIngresa txt_login2" type="submit">Ingresar</button>
+            </div>
+
+        </form>
+    </div>
+
+
+
+
+</body>
+
+@section Scripts {
+
+    <script>
+       @if (TempData.ContainsKey("dat"))
+    {
+        <text>
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'Datos incorrectos'
+            });
+        </text>
+    }
+            
+    </script>
+}
